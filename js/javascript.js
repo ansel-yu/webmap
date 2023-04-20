@@ -44,17 +44,18 @@ async function addDistrictsGeoJson(url) {
     const data = await response.json() 
     const polygons = L.geoJson(data, {
         OnEachFeature: popUPinfo,
-        style: polygonStyle,}) 
+        style: polygonStyle
+    }) 
     polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
 
 // add geoJSON polygons layer
-async function addDistrictsGeoJson(url) { 
+async function addCellTowerGeoJson(url) { 
     const response = await fetch(url) 
     const data = await response.json() 
     const polygons = L.geoJson(data)
     polygons.addTo(map)
 }
-addDistrictsGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+addCellTowerGeoJson('geojson/tartu_city_celltowers_edu.geojson')
 

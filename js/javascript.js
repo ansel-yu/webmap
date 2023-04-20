@@ -9,6 +9,11 @@ const osm =
     osm.addTo(map)
 
 
+
+// add popup to each feature
+function popUPinfo(feature, layer) { 
+    layer.bindPopup(feature.properties.NIMI)
+}
 // add geoJSON polygons layer*
 async function addDistrictsGeoJson(url) { 
     const response = await fetch(url) 
@@ -17,11 +22,6 @@ async function addDistrictsGeoJson(url) {
     polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
-
-
-// add popup to each feature
-function popUPinfo(feature, layer) { layer.bindPopup(feature.properties.NIMI)
-}
 
 // add geoJSON polygons layer
 async function addDistrictsGeoJson(url) { 
@@ -32,4 +32,4 @@ async function addDistrictsGeoJson(url) {
 })
     polygons.addTo(map)
 }
-addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
+addDistrictsGeoJson('geojson/tartu_city_celltowers_edu.geojson')

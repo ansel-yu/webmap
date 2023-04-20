@@ -10,6 +10,30 @@ const osm =
 
 
 
+// get color from feature property
+function getColor(property) { 
+    switch (property) {
+        case 1:
+            return '#ff0000'
+        case 13:
+            return '#009933'
+        case 6:
+            return '#0000ff'
+        case 7:
+            return '#ff0066'
+        default:
+            return '#ffffff'
+    } }
+
+// polygon style
+function polygonStyle(feature) { 
+    return {
+        fillColor: getColor(feature.properties.OBJECTID), fillOpacity: 0.5,
+        weight: 1,
+        opacity: 1,
+        color: 'grey', }
+    }
+
 // add popup to each feature
 function popUPinfo(feature, layer) { 
     layer.bindPopup(feature.properties.NIMI)
@@ -18,7 +42,9 @@ function popUPinfo(feature, layer) {
 async function addDistrictsGeoJson(url) { 
     const response = await fetch(url) 
     const data = await response.json() 
-    const polygons = L.geoJson(data) 
+    const polygons = L.geoJson(data, {
+        OnEachFeature: popUPinfo,
+        style: polygonStyle,}) 
     polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
@@ -27,9 +53,8 @@ addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
 async function addDistrictsGeoJson(url) { 
     const response = await fetch(url) 
     const data = await response.json() 
-    const polygons = L.geoJson(data, {
-        OnEachFeature: popUPinfo,
-})
+    const polygons = L.geoJson(data)
     polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+

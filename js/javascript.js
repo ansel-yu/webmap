@@ -50,12 +50,20 @@ async function addDistrictsGeoJson(url) {
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
 
+function createCircle(feature, latlng) { let options = {
+    radius: 5, fillColor: 'red', fillOpacity: 0.5, color: 'red', weight: 1, opacity: 1,
+    }
+    return L.circleMarker(latlng, options) }
+    
+
 // add geoJSON polygons layer
 async function addCellTowerGeoJson(url) { 
     const response = await fetch(url) 
     const data = await response.json() 
-    const polygons = L.geoJson(data)
-    polygons.addTo(map)
+    const circles = L.geoJson(data, {
+        PointToLayer: createCircle,
+    })
+    circles.addTo(map)
 }
 addCellTowerGeoJson('geojson/tartu_city_celltowers_edu.geojson')
 

@@ -8,13 +8,12 @@ async function addGeoJson(url) {
         radius: 10
     })
     heatMap.addto(map)
-    // console.log(heatData)
 }
 
 function heatDataConvert(feature) {
     return [
         feature.geometry.coordinate[1],
         feature.geometry.coordinate[0],
-        feature.properities.area,
+        feature.properties.area,
     ]
 }

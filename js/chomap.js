@@ -12,7 +12,7 @@ async function addGeoJson(url) {
     const data = await response.json()
 
     L.choropleth(data, {
-        valueProperty: 'OBJECTID', // which property in the features to use
+        valueProperty: 'area', // which property in the features to use
         scale: ['white', 'red'], // chroma.js scale - include as many as you like
         steps: 5, // number of breaks or steps in range
         mode: 'q', // q for quantile, e for equidistant, k for k-means

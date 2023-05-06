@@ -50,8 +50,9 @@ async function addDistrictsGeoJson(url) {
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
 
-function createCircle(feature, latlng) { let options = {
-    radius: 5, fillColor: 'red', fillOpacity: 0.5, color: 'red', weight: 1, opacity: 1,
+function createCircle(feature, latlng) { 
+    let options = {
+        radius: 5, fillColor: 'red', fillOpacity: 0.5, color: 'red', weight: 1, opacity: 1,
     }
     return L.circleMarker(latlng, options) }
     

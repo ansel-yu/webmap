@@ -30,3 +30,6 @@ async function addGeoJson(url) {
 
 addGeoJson('geojson/tartu_city_districts_edu.geojson')
 
+function backDefault() {
+    map.setView([58.373523, 26.716045], 12)
+}

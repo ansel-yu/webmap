@@ -25,3 +25,7 @@ function heatDataConvert(feature) {
         feature.properties.area,
     ]
 }
+
+function backDefault() {
+    map.setView([58.373523, 26.716045], 12)
+}

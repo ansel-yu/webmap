@@ -22,7 +22,7 @@ async function addGeoJson(url) {
             fillOpacity: 0.8
         },
         onEachFeature: function(feature, layer) {
-            layer.bindPopup(feature.properties.OBJECTID)
+            layer.bindPopup(feature.properties.area)
         }
     }).addTo(map)   
 }

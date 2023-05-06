@@ -18,7 +18,7 @@ async function addGeoJson(url) {
         scale: ['#ffffff', '#ff9900'],
         steps: 5,
         mode: 'q',
-        style {
+        style: {
             color: '#fff',
             weight: 2,
             fillOpacity: 0.8,    

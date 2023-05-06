@@ -19,7 +19,7 @@ async function addGeoJson(url) {
         steps: 5,
         mode: 'q',
         style: {
-            color: '#fff',
+            color: '#ffffff',
             weight: 2,
             fillOpacity: 0.8,    
         },

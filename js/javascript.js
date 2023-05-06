@@ -61,10 +61,15 @@ function createCircle(feature, latlng) {
 async function addCellTowerGeoJson(url) { 
     const response = await fetch(url) 
     const data = await response.json() 
-    const circles = L.geoJson(data, {
-        PointToLayer: createCircle,
-    })
-    circles.addTo(map)
+    // const circles = L.geoJson(data, {
+    //     PointToLayer: createCircle,
+    // })
+    // circles.addTo(map)
+    const markers = L.geoJson(data)
+    const clusters = L.markerClusterGroup()
+    clusters.addLayer(markers)
+    clusters.addTo(map)
+
 }
 addCellTowerGeoJson('geojson/tartu_city_celltowers_edu.geojson')
 

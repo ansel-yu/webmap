@@ -25,8 +25,6 @@ nav a.active {
 #map {
  height: 700px;
  width:90%;
- 
-    
 }
 
 .banner {
@@ -35,15 +33,12 @@ nav a.active {
     url(https://ut.ee//sites/default/files/styles/ut_content_top_header/public/2023-04/52086215994_2bb6b06e76_o.jpg);
     height: 200px;
     background-size: length;
-    
   }
 
   .container {
     padding-left: 5%;
     padding-right: 5%;
     background-color: darkcyan;
-
-
   }
 
   footer {
@@ -52,5 +47,4 @@ nav a.active {
     background-color: blanchedalmond;
     color: black;
     text-align: center;
-
   }

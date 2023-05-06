@@ -12,7 +12,7 @@ async function addGeoJson(url) {
     const data = await response.json()
 
     L.choropleth(data, {
-        valueProperty: 'area', // which property in the features to use
+        valueProperty: 'OBJECTID', // which property in the features to use
         scale: ['white', 'red'], // chroma.js scale - include as many as you like
         steps: 5, // number of breaks or steps in range
         mode: 'q', // q for quantile, e for equidistant, k for k-means
@@ -22,11 +22,11 @@ async function addGeoJson(url) {
             fillOpacity: 0.8
         },
         onEachFeature: function(feature, layer) {
-            layer.bindPopup(feature.properties.area)
+            layer.bindPopup(feature.properties.OBJECTID)
         }
     }).addTo(map)   
 }
 
 
-addGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+addGeoJson('geojson/tartu_city_districts_edu.geojson')
 

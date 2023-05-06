@@ -1,14 +1,15 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(157, 184, 194);
 }
 
 h1 {
-    color: white;
+    color: rgb(61, 66, 78);
     text-align: center;
+    
 }
 
 h2 {
-    color: beige;
+    color: rgb(183, 184, 190);
     text-align: center;
 }
 
@@ -22,6 +23,34 @@ nav a.active {
 }
 
 #map {
- height: 800px;
- width: 1200px;   
+ height: 700px;
+ width:90%;
+ 
+    
 }
+
+.banner {
+    /* The image used */
+    background-image:
+    url(https://ut.ee//sites/default/files/styles/ut_content_top_header/public/2023-04/52086215994_2bb6b06e76_o.jpg);
+    height: 200px;
+    background-size: length;
+    
+  }
+
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: darkcyan;
+
+
+  }
+
+  footer {
+    margin-top: 0%;
+    padding: 0%;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+
+  }

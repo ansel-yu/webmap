@@ -4,31 +4,40 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <link rel="stylesheet" href="css/mystyle.css">
-        <title>TEST PAGE for WEB MAP</title>
+        <title>SDI WEB MAPS</title>
 
     </head>
+
     <body>
-        <h2>PAGE TITLE</h2>
-        <p>This is line 1</p>
-        <p>This is line 2</p>
-
-
-        <div class="Banner">
-        </div>
-
-        <nav>
-            <a class="active" href="https://">link1</a>
-            <a href="https://">link2</a>
-            <a href="https://">link3</a>
-        </nav>
-
-        <div id="map">
+        <div class="banner">
+        <h1>Spatial Data Infrastructure: Web Maps</h1>
         
         </div>
 
+        <nav>
+            <a> | </a>
+            <a class="active" href="index.html">Basic Map</a>
+            <a> | </a>
+            <a href="cho_map.html">Choropleth Map</a>
+            <a> | </a>
+            <a href="heat_map.html">Heat Map</a>
+            <a> | </a>
+        </nav>
+
+        <div>
+            <p>This pages use leaflet to present web maps.</p>
+        </div>
+        <div class="container">
+            <div id="map">
+            </div>
+        </div>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="js/javascript.js"></script>
 
+        <footer>
+            Cheng-Wei Yu, Department of Geography at University of Tartu, 2023.
+            Data source: Spatial Data Infrastructures (LTOM.02.043)
+        </footer>
     </body>
 
 </html>

@@ -74,5 +74,5 @@ async function addCellTowerGeoJson(url) {
 addCellTowerGeoJson('geojson/tartu_city_celltowers_edu.geojson')
 
 function backDefault() {
-    osm.addTo(map)
+    map.setView([58.373523, 26.716045], 12).addTo()
 }

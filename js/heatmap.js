@@ -12,8 +12,8 @@ async function addGeoJson(url) {
 
 function heatDataConvert(feature) {
     return [
-        feature.geometry.coordinate[1],
-        feature.geometry.coordinate[0],
+        feature.geometry.coordinates[1],
+        feature.geometry.coordinates[0],
         feature.properties.area,
     ]
 }

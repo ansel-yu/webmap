@@ -1,4 +1,4 @@
-addGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+addGeoJson('webmap/geojson/tartu_city_celltowers_edu.geojson')
 
 async function addGeoJson(url) {
     const response = await fetch(url)

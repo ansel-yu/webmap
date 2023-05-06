@@ -38,7 +38,7 @@ nav a.active {
   .container {
     padding-left: 5%;
     padding-right: 5%;
-    background-color: darkcyan;
+    
   }
 
   footer {
@@ -47,4 +47,9 @@ nav a.active {
     background-color: blanchedalmond;
     color: black;
     text-align: center;
+  }
+
+  nav {
+    text-align: center;
+    size: 10px;
   }

@@ -23,7 +23,8 @@ async function addGeoJson(url) {
         onEachFeature: function(feature, layer) {
             layer.bindPopup(feature.properties.OBJECTID)
         }
-    }).addTo(map)
+    })
+    L.choropleth.addTo(map)
     
     
 }

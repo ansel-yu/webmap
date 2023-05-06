@@ -26,6 +26,6 @@ async function addGeoJson(url) {
         onEachFeature: function(feature, layer) {
             layer.bindPopup('Value: ' + feature.properties.OBJECTID)
         },
-    }).heatMap.addTo(map)
+    }).addTo(map)
 }
 
